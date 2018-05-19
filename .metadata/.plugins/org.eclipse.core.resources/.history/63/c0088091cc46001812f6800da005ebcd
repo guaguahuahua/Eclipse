@@ -1,0 +1,19 @@
+package com.xjtu.algorithm;
+/**
+ * 找到数组中出现次数超过一般的元素
+ * @author Administrator
+ *
+ */
+public class FindHalfTimesElement {
+
+	public static int findHalfTimesElement(int []nums) {
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

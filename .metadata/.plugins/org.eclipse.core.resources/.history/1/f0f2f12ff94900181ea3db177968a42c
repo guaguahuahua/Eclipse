@@ -1,0 +1,15 @@
+package com.xjtu.algorithm;
+
+/**
+ * 给定一个正整数，
+ * @author Administrator
+ *
+ */
+public class SumIsS {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

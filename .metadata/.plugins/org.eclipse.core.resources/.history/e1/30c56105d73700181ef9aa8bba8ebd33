@@ -1,0 +1,59 @@
+package com.xjtu.algorithm;
+
+public class FindIn2DArray {
+	
+	/**
+	 * 在给定的二维数组中寻找特定的数是否存在，存在返回true,不存在返回false
+	 * brute force法
+	 * @param nums
+	 * @return
+	 */
+	public static boolean find(int [][]nums, int target) {
+		
+		//双层for循环，但是没有利用题目给定的从左到右从上倒下依次是有序的
+		for(int row=0; row<nums.length; row++) {
+			for(int col=0; col<nums.length; col++) {
+				if(nums[row][col]==target) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	/**
+	 * 使用分治法进行搜索，搜索起始点有两个，左下角和右上角
+	 * 我们选择右上角开始搜索
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
+	public static boolean find_1(int [][]nums, int target) {
+		
+		for(int col=nums.length; col>=0; ) {
+			for(int row=0; row<nums.length; ) {
+				if(target<nums[row][col]) {
+					
+				}else if(target>nums[row][col]) {
+					
+				}else {
+					
+				}
+			}
+		}
+		
+		return false;
+	}
+	
+	public static void main(String []args) {
+		int [][]nums= {
+				{1,2,8, 9 },
+				{2,4,9, 12},
+				{4,7,10,13},
+				{6,8,11,15}
+		};
+		int target=5;
+		boolean res=find(nums, target);
+		System.out.println(res);
+	}
+}

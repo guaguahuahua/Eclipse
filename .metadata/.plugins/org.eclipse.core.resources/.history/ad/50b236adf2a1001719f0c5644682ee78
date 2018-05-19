@@ -1,0 +1,13 @@
+package com.xjtu;
+
+public class ValidTriangleNumber {
+
+    public static int triangleNumber(int[] nums) {
+        
+    	return 0;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+
+}

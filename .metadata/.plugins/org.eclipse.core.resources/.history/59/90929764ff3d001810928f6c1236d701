@@ -1,0 +1,14 @@
+package com.xjtu.algorithm;
+
+public class AdjustArray {
+
+	public static void adjustArray() {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

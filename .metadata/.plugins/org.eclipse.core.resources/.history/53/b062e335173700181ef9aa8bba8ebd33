@@ -1,0 +1,14 @@
+package com.xjtu.algorithm;
+
+public class FloydProblem {
+	public static final int  inf=Integer.MAX_VALUE;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]e= {
+				{0,2,6,4},
+				{inf,0,4,inf}
+		}
+	}
+
+}

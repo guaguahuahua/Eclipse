@@ -1,0 +1,31 @@
+package com.xjtu.algorithm;
+
+/**
+ * 打印从1到最大n位数
+ * @author Administrator
+ *
+ */
+public class PrintOneToMaxN {
+
+	/**
+	 * n是[1,5]区间内的正整数
+	 * 根据给定的n生成最大的n位数，然后通过遍历的方式实现
+	 * @param n
+	 */
+	public static void printOneToMaxN(int n) {
+		int max=0;
+		//生成最大的n位数
+		while(n>=1) {
+			max=max+9*(int)Math.pow(10,n-1);
+			n--;
+		}
+		//输出从1到最大的n位数之间的所有数
+		for(int i=1; i<=max; i++) {
+			System.out.println(i);
+		}	
+	}
+	
+	public static void main(String []args) {
+		printOneToMaxN(5);
+	}
+}

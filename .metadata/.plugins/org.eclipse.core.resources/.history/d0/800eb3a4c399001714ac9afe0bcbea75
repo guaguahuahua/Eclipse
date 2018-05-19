@@ -1,0 +1,8 @@
+package com.xjtu;
+
+public class ArrayNesting {
+	
+	public static void main(String []args) {
+		
+	}
+}

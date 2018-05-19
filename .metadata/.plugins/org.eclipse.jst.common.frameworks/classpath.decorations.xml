@@ -1,0 +1,12 @@
+<classpath>
+  <container id="StrutsStudy!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/StrutsStudy/WebContent/WEB-INF/lib/struts2-core-2.3.34.jar">
+      <source-attachment-path>E:/Eclipse/StrutsStudy/WebContent/WEB-INF/lib/commons-fileupload-1.3.2.jar</source-attachment-path>
+    </entry>
+  </container>
+  <container id="LPR!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Eclipse/LPR/WebContent/WEB-INF/lib/opencv-330.jar">
+      <attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY">C:/opencv-3.3.0/build/java/x64</attribute>
+    </entry>
+  </container>
+</classpath>

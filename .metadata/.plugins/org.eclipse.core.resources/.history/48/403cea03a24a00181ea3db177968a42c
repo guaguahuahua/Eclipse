@@ -1,0 +1,29 @@
+package com.xjtu.algorithm;
+
+import java.util.Arrays;
+
+public class JudgeShunzi {
+
+	/**
+	 * 判断输入的数组是否为顺子（连续的正整数序列）
+	 * @param nums
+	 * @return
+	 */
+	public static boolean judgeShunzi(int []nums) {
+		
+		Arrays.sort(nums);
+		int zeros=0;
+		for(int i=0; i<nums.length; i++) {
+			if(nums[i]==0;\) {
+				
+			}
+		}
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

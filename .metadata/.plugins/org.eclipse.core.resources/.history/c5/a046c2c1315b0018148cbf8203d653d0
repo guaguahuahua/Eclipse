@@ -1,0 +1,25 @@
+package Test.JunitTest;
+
+
+import org.junit.jupiter.api.Test;
+
+import com.xjtu.OneInterface;
+import com.xjtu.OneInterfaceImpl;
+
+class TestOneInterface extends UnitTestBase {
+
+	public TestOneInterface(String springXmlPath) {
+		super(springXmlPath);
+		// TODO Auto-generated constructor stub
+	}
+
+	public 
+	
+	@Test
+	void test() {
+		OneInterface one=new OneInterfaceImpl();
+		String res=one.getName("zhouyadong");
+		System.out.println(res);
+	}
+
+}

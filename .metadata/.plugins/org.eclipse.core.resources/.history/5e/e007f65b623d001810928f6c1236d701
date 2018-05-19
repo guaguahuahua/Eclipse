@@ -1,0 +1,83 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求给定浮点数的整数次幂
+ * @author Administrator
+ *
+ */
+public class Power {
+
+	/**
+	 * 第一种解法，使用java提供的math方法进行计算
+	 * @param base
+	 * @param exponent
+	 * @return
+	 */
+	public static double power(double base, int exponent) {
+		
+		return Math.pow(base, exponent);
+	}
+	
+	/**
+	 * 使用for循环的方式实现
+	 * @param base
+	 * @param exponent
+	 * @return
+	 */
+	public static double power_1(double base, int exponent) {
+		
+		double res=1.0;
+		boolean isNegative=false;
+		//如果幂次为负，那么底数不能为0
+		if(exponent<0) {
+			isNegative=true;
+			exponent=-exponent;
+			//如果底数为0同时指数为负，那么就是越界情形
+			if(base==0) {
+				return Double.MAX_VALUE;
+			}
+		}
+		
+		for(int i=0; i<exponent; i++) {
+			res=res*base;
+		}
+		//如果是正数，直接返回结果，如果是负数，返回倒数
+		if(isNegative) {
+			return 1/res;
+		}
+		return res;
+	}
+	
+	public static double power_2(double base, int exponent) {
+		
+		boolean isNegative=false;
+		if(exponent<0) {
+			isNegative=true;
+			exponent=-exponent;
+		}
+		double res=1;
+		double fac=base;
+		//按照正指数的方式进行
+		while(exponent!=0) {
+			
+			if((exponent&1)==1) {
+				res=res*fac;
+			}
+			
+			fac=fac*base;
+			exponent=exponent>>1;
+		}
+		//如果指数为正，那么直接返回，如果指数不为正，返回倒数
+		if(isNegative) {
+			return 1/res;
+		}
+		return res;
+	}
+	
+	public static void main(String []args) {
+		double base=2;
+		int exponent=4;
+		double res=power_2(base, exponent);
+		System.out.println(res);
+	}
+}

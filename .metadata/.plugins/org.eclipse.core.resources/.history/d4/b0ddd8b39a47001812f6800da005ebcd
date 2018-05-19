@@ -1,0 +1,32 @@
+package com.xjtu.algorithm;
+/**
+ * 统计从1到n中十进制数1出现的次数
+ * @author Administrator
+ *
+ */
+public class TheTimesOfOne {
+
+	/**
+	 * 分别统计从各个位上面1出现的次数
+	 * @param n
+	 * @return
+	 */
+	public static int theTimesOfOne(int n) {
+		
+		int count=0;
+		String num=n+"";
+		for(int i=num.length()-1; i>=0; i--) {
+			char c=
+			if() {
+				
+			}
+		}
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

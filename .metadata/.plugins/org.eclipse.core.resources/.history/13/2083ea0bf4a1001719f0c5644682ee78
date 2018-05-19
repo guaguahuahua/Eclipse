@@ -1,0 +1,24 @@
+package com.xjtu;
+
+public class ValidTriangleNumber {
+
+	/**
+	 * 获得三角形数，使用最朴素的算法， 枚举，从数组一个到最后一个
+	 * @param nums
+	 * @return
+	 */
+    public static int triangleNumber(int[] nums) {
+        int count=0;
+        for(int index=0;index<nums.length;index++) {
+        	
+        }
+    	return 0;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums= {2,2,3,4};
+		int res=triangleNumber(nums);
+		System.out.println("triangle number :"+res);
+	}
+
+}

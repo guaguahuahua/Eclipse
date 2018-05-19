@@ -1,0 +1,88 @@
+package com.xjtu.algorithm;
+
+import java.util.LinkedList;
+
+/**
+ * 逆转一个字符串
+ * @author Administrator
+ *
+ */
+public class ReverseAString_1 {
+
+	/**
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static String reverseAString(String str) {
+		
+		//将整个字符串逆转
+		String step1=reverse(str);
+		//将逆转之后的字符串使用空格分开
+		String []strs=step1.split("\\s+");
+		StringBuilder sb=new StringBuilder();
+		//依次的将每个单词进行逆转
+		for(int i=0; i<strs.length; i++) {
+			String t=reverse(strs[i]);
+			sb.append(t+" ");
+		}
+		return sb.toString();
+	}
+	
+	/**
+	 * 对给定的整个字符串进行逆转
+	 * @param str
+	 * @return
+	 */
+	public static String reverse(String str) {
+		
+		StringBuilder sb=new StringBuilder();
+		for(int i=str.length()-1; i>=0; i--) {
+			sb.append(str.charAt(i));
+		}
+		return sb.toString();
+	}
+	
+	/**
+	 * 使用堆栈实现字符串的逆转
+	 * @param str
+	 * @return
+	 */
+	public static String reverseAString_1(String str) {
+		LinkedList<Character> stack=new LinkedList<Character>();
+		StringBuilder sb=new StringBuilder();
+		//首先将字符串整体放进栈中去
+		for(int i=0; i<str.length(); i++) {
+			stack.push(str.charAt(i));
+		}
+		//在创建一个栈用来存放单个单词
+		LinkedList<Character> word=new LinkedList<Character>();
+		//第一个栈出栈
+		while(!stack.isEmpty()) {
+			char c
+		}
+		
+		for(int i=0; i<str.length(); i++) {
+			char c=str.charAt(i);
+			if(c!=' ') {
+				stack.push(c);
+			}else {
+				String s="";
+				//如果是空格那么就是一个单词结束了
+				while(!stack.isEmpty()) {
+					s=s+stack.pop();
+				}
+				sb.append(s+" ");
+			}
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="kat is a student";
+		String res=reverseAString(s);
+		System.out.println(res);
+	}
+
+}

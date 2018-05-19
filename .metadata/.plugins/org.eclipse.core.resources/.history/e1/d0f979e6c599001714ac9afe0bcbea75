@@ -1,0 +1,34 @@
+package com.xjtu;
+
+import java.util.Arrays;
+
+public class ArrayNesting {
+	/**
+	 * 完成数字接龙游戏，并返回最大的接龙长度
+	 * @param nums
+	 * @return
+	 */
+    public static int arrayNesting(int[] nums) {
+        int []length=new int[nums.length]; // 用来存放每一个接龙的长度
+        if(nums.length==0) {
+        	return 0;
+        }
+        for(int i=0;i<nums.length;i++) {
+        	int j=i,times=1;
+        	while(nums[j]!=i) {
+        		j=nums[j];
+        		times++;
+        	}
+        	length[i]=times;
+        }
+        Arrays.sort(length);
+
+    	return length[length.length-1];
+    }
+	public static void main(String []args) {
+//		int []nums= {5,4,0,3,1,6,2};
+		int []nums= {};
+		int res=arrayNesting(nums);
+		System.out.print(res+"\t");		
+	}
+}

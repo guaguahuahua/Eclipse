@@ -1,0 +1,18 @@
+package com.xjtu.algorithm;
+
+public class StackSimulateQueue {
+
+	public static void append(int data) {
+		
+	}
+	
+	public static int poll() {
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

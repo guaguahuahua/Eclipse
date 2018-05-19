@@ -1,0 +1,8 @@
+package com.xjtu.algorithm;
+
+public class ASCIITest {
+
+	public static void main(String []args) {
+		char c='A';
+	}
+}

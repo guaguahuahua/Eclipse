@@ -1,0 +1,8 @@
+package com.dao;
+
+public interface MaintainerDao {
+
+	public void queryAllOrders();
+	
+	public void queryMyHandles();
+}

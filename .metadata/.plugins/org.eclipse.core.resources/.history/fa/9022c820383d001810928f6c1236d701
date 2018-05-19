@@ -1,0 +1,32 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求fabonacci数列的第n项
+ * @author Administrator
+ *
+ */
+public class FabonacciProblem {
+
+	/**
+	 * 递归的方式
+	 * @param n
+	 * @return
+	 */
+	public static int fabonacci(int n) {
+		
+		if(n==0) {
+			return 0;
+		}else if(n==1) {
+			return 1;
+		}else {
+			return fabonacci(n-1)+fabonacci(n-2);	
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=5
+		int res=fabonacci(n);
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.xjtu.algorithm;
+
+public class FindIn2DArray {
+	
+	public static boolean find() {}
+	
+	public static void main(String []args) {
+		
+	}
+}

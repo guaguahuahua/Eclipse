@@ -1,0 +1,19 @@
+package Test.JunitTest;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import com.xjtu.OneInterface;
+import com.xjtu.OneInterfaceImpl;
+
+class TestOneInterface {
+
+	@Test
+	void test() {
+		OneInterface one=new OneInterfaceImpl();
+		String res=one.getName("zhouyadong");
+		System.out.println(res);
+	}
+
+}

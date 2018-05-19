@@ -1,0 +1,69 @@
+package com.xjtu.algorithm;
+
+public class FloydProblem {
+	public static final int  inf=999999;
+
+	/**
+	 * floyd算法实现
+	 * 通过添加中间节点来减少任意两个节点之间的距离
+	 * @param e
+	 */
+	public static void floydProblem(int [][]e) {
+		//首先实现添加一个中间节点a来减少距离值,中间节点一单添加成功便会更新整体的路径长度值、
+		//也就是不断遍历的过程中，不断添加中间节点的过程，
+		for(int k=0; k<e.length; k++) {
+			for(int i=0; i<e.length; i++) {
+				for(int j=0; j<e.length; j++) {
+					
+					if(e[i][j]>e[i][k]+e[k][j]) {
+						e[i][j]=e[i][k]+e[k][j];
+					}	
+			
+				}
+			}	
+		}
+		show(e);
+	}
+	
+	
+	public static void show(int [][]nums) {
+		
+		for(int row=0; row<nums.length; row++) {
+			for(int col=0; col<nums.length; col++) {
+				System.out.print(nums[row][col]+"\t");
+			}
+			System.out.println();			
+		}
+	}
+	
+	/**
+	 * 代码的识记过程
+	 * @param e
+	 */
+	public static void floydProblem_2(int [][]e) {
+		
+		//首先实现插入1号节点的效果
+		for(int i=0; i<e.length; i++) {
+			for(int j=0; j<e.length; j++) {
+				if(e[i][j]>e[i][1]+e[1][j]) {
+					e[i][j]=e[i][1]+e[1][j];
+				}
+			}
+		}
+		show();
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] e = { 
+				{ 0, 2, 6, 4 }, 
+				{ inf, 0, 4, inf }, 
+				{ 7, inf, 0, 1 }, 
+				{ 5, inf, 12, 0 } 
+				};
+		
+		floydProblem_2(e);
+	}
+
+}

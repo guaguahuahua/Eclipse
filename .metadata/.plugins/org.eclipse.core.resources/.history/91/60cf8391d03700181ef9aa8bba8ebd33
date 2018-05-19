@@ -1,0 +1,18 @@
+package com.xjtu.algorithm;
+
+public class FindIn2DArray {
+	
+	/**
+	 * 在给定的二维数组中寻找特定的树
+	 * @param nums
+	 * @return
+	 */
+	public static boolean find(int [][]nums) {
+		
+		return false;
+	}
+	
+	public static void main(String []args) {
+		
+	}
+}

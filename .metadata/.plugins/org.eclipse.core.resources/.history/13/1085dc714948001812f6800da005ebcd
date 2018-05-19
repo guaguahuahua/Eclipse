@@ -1,0 +1,46 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 给定整型数组，将数组中的元素组合为一个整数，该整数为所有组合中的最小值
+ * @author Administrator
+ *
+ */
+public class SmallestNumOfArray {
+
+	public static int smallestNumOfArray(int []nums) {
+		//获得数组中元素组合的全排列
+		
+		//一趟选择排序，找到最小值
+		
+		
+		return 0;
+	}
+	
+	public static void backtrack(int []nums, List<Integer>tempList, List<List<Integer>> list, boolean []flag) {
+		if(tempList.size()==nums.length) {
+			list.add(new ArrayList(tempList));
+		}else {
+			for(int i=0; i<nums.length; i++) {
+				if(flag[i]==false) {
+					tempList.add(nums[i]);
+					flag[i]=true;
+					backtrack(nums, tempList, list, flag);
+					flag[i]=false;
+					tempList.remove(tempList.size()-1);
+				}
+			}
+		}
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums= {3, 32, 321};
+		smallestNumOfArray(nums);
+	}
+
+}

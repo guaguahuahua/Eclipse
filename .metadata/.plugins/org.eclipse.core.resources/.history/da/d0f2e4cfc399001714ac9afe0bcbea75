@@ -1,0 +1,15 @@
+package com.xjtu;
+
+public class ArrayNesting {
+	/**
+	 * 完成数字接龙游戏，并返回最大的接龙长度
+	 * @param nums
+	 * @return
+	 */
+    public static int arrayNesting(int[] nums) {
+        return 0;
+    }
+	public static void main(String []args) {
+		int []nums=new int
+	}
+}

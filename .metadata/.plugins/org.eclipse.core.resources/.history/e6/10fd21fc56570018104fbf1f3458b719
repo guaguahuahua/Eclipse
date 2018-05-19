@@ -1,0 +1,16 @@
+package com.dao;
+
+import java.util.List;
+
+public interface RepairDao {
+	/**
+	 * 提交维修订单
+	 * @return
+	 */
+	public boolean submit(Repair r);
+	
+	/**
+	 * 查询数据库中最大的维修订单号，订单号使用数字串进行查询
+	 */
+	public String queryMax();
+}

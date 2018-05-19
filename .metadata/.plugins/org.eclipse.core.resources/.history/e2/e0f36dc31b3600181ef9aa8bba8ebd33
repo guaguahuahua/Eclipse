@@ -1,0 +1,7 @@
+package com.xjtu.algorithm;
+
+public class CountOnes {
+	public static int countOnes(int n) {
+		return 0;
+	}
+}

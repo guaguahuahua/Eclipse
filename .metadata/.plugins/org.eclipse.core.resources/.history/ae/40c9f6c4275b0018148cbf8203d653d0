@@ -1,0 +1,5 @@
+package com.xjtu;
+
+public interface OneInterface {
+	
+}

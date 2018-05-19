@@ -1,0 +1,11 @@
+package com.xjtu.algorithm;
+
+public class BinSearch {
+	
+	public static int binsearch() {}
+	
+	public static void main(String []args) {
+		
+	}
+
+}

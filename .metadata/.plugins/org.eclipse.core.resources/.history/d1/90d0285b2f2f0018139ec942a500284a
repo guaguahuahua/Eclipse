@@ -1,0 +1,22 @@
+package com.xjtu.algorithm;
+
+import java.util.List;
+
+public class Find2Numbers {
+
+	/**
+	 * 
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
+	public static List<Integer> find2Numbers(int []nums, int target){
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

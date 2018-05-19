@@ -1,0 +1,72 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求fabonacci数列的第n项
+ * @author Administrator
+ *
+ */
+public class FabonacciProblem {
+
+	/**
+	 * 递归的方式， 时间复杂度为fabanacci(n)约为2^0.694n
+	 * @param n
+	 * @return
+	 */
+	public static int fabonacci(int n) {
+		
+		if(n==0) {
+			return 0;
+		}else if(n==1) {
+			return 1;
+		}else {
+			return fabonacci(n-1)+fabonacci(n-2);	
+		}
+	}
+	
+	/**
+	 * O(n)时间复杂度
+	 * @param n
+	 * @return
+	 */
+	public static int fabonacci_1(int n) {
+		
+		int f0=0;
+		int f1=1;
+		if(n==0) {
+			return f0;
+		}else if(n==1) {
+			return f1;
+		}
+		
+		int fn=0;
+		for(int i=2; i<=n; i++) {
+			fn=f1+f0;
+			f0=f1;
+			f1=fn;
+		}
+		return fn;
+	}
+	
+	/**
+	 * O(n)时间复杂度
+	 * @param n
+	 * @return
+	 */
+	public static int fabonacci_2(int n) {
+		
+		int f0=0;
+		int f1=1;
+		int [][]a= {{1,1},{0,1}};
+		for() {}
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=1;
+		int res=fabonacci_1(n);
+		System.out.println(res);
+	}
+
+}

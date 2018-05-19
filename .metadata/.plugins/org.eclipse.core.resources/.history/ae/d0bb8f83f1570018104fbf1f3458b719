@@ -1,0 +1,8 @@
+package com.action;
+
+public class ClientAction extends ActionSupport{
+
+	public String loginAction() {
+		return SUCCESS;
+	}
+}

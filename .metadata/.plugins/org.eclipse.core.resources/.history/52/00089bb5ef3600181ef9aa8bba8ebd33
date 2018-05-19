@@ -1,0 +1,18 @@
+package com.xjtu.algorithm;
+
+public class DjkstraProblem {
+
+	/**
+	 * 给定边集合求从第一个顶点到其他顶点的最短距离
+	 * @param e
+	 */
+	public static void dijkstraProblem(int [][]e) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

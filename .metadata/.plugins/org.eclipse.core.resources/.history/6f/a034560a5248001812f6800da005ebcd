@@ -1,0 +1,25 @@
+package com.xjtu.algorithm;
+/**
+ * 只包含因子2，3，5数称为丑数，6，8是丑数，而14不是，因为包含了7
+ * 一般的认为1是第一个丑数，返回第n个丑数
+ * @author Administrator
+ *
+ */
+public class UglyNumber {
+
+	/**
+	 * 暴力法，每个数轮流的除2，3，5
+	 * @param n
+	 * @return
+	 */
+	public static int uglyNumber(int n) {
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

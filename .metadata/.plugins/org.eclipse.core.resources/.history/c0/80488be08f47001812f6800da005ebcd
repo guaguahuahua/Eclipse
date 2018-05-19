@@ -1,0 +1,10 @@
+package com.xjtu.algorithm;
+
+public class MaxSubArray_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums={6,-3,-2,7,-15,1,2,2}, 
+	}
+
+}

@@ -1,0 +1,25 @@
+package com.xjtu.algorithm;
+
+/**
+ * 找到数组中k个最小的元素
+ * @author Administrator
+ *
+ */
+public class FindKMinValues {
+	
+	/**
+	 * 直接排序
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues(int []nums, int k) {
+		
+		return null;
+	}
+	
+	public static void main(String []args) {
+		
+	}
+
+}

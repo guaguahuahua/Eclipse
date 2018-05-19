@@ -1,0 +1,15 @@
+package com.xjtu.algorithm;
+
+/**
+ * Í³¼Æ
+ * @author Administrator
+ *
+ */
+public class CountTimesInSortedArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

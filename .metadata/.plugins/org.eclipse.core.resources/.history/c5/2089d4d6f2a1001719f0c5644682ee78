@@ -1,0 +1,16 @@
+package com.xjtu;
+
+public class ValidTriangleNumber {
+
+    public static int triangleNumber(int[] nums) {
+        
+    	return 0;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums= {2,2,3,4};
+		int res=triangleNumber(nums);
+		System.out.println("triangle number :"+res);
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.xjtu.algorithm;
+
+public class Rebuild {
+
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]data= {{0,0,0,0,0,0,0,0},
+				   {0,0,1,1,1,1,0,0},
+				   {0,1,1,1,1,1,0,0},
+				   {0,1,1,0,0,1,1,0},
+				   {0,1,1,0,0,1,1,0},
+				   {0,1,1,1,1,1,1,0},
+				   {0,0,1,1,1,1,0,0},
+				   {0,0,0,0,0,0,0,0}
+				   };
+	borderFollowing(data);
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.dao;
+
+import java.util.List;
+
+public interface RepairDao {
+	/**
+	 * Ã·ΩªŒ¨–ﬁ∂©µ•
+	 * @return
+	 */
+	public boolean submit();
+	
+	/**
+	 * 
+	 */
+	public void queryMax();
+}

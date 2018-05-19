@@ -1,0 +1,33 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+/**
+ * 给定字符串获得字符串的所有组合
+ * @author Administrator
+ *
+ */
+public class CombinationsOfString {
+
+	public static List combinationsOfString(String s) {
+		
+		return null;
+	}
+	
+	public static void backtrack(String s, List<String> tempList, int start, List<List<String>> list) {
+		if(tempList.size()==s.length()) {
+			list.add(new ArrayList(tempList));
+		}else{
+			for(int i=start; i<s.length(); i++) {
+				tempList.add(e)
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

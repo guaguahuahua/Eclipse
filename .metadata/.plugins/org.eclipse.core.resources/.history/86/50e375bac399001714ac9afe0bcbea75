@@ -1,0 +1,15 @@
+package com.xjtu;
+
+public class ArrayNesting {
+	/**
+	 * 
+	 * @param nums
+	 * @return
+	 */
+    public static int arrayNesting(int[] nums) {
+        return 0;
+    }
+	public static void main(String []args) {
+		
+	}
+}

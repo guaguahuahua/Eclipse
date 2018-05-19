@@ -1,0 +1,17 @@
+package com.xjtu.algorithm;
+
+/**
+ * 打印从1到最大n位数
+ * @author Administrator
+ *
+ */
+public class PrintOneToMaxN {
+
+	/**
+	 * n是[1,5]区间内的正整数
+	 * @param n
+	 */
+	public static void printOneToMaxN(int n) {
+		//根据给定的n生成最大的n位数，然后通过遍历的方式实现
+	}
+}

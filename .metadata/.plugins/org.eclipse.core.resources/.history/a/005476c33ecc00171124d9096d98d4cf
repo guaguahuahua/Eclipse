@@ -1,0 +1,45 @@
+package com.xjtu.ann;
+
+import java.io.File;
+
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.ml.ANN_MLP;
+
+import com.xjtu.util.ExtractANNFeature;
+import com.xjtu.util.Imshow;
+
+public class TrainANNModel {
+	public static String filePath="E:/ann";
+	
+	public static void trainANNModel() {
+		Mat trainData=new Mat();
+		File file=new File(filePath);
+		File []fileArray=file.listFiles();
+		//遍历文件数组，抽取每个文件的特征存放在ANN输入的Mat中
+		File []fileList = null;
+		for(int i=0; i<fileArray.length; i++) {
+			if(fileArray[i].isDirectory()) {
+				//获得该文件夹的绝对路径
+				String path=fileArray[i].getAbsolutePath();
+				//得到该文件夹下面的所有文件
+				fileList=(new File(path)).listFiles();
+			}
+			
+			for(int j=0; j<fileList.length; j++) {
+				String singleFile=fileList[i].getAbsolutePath();
+				Mat mat=Imgcodecs.imread(singleFile);
+				Mat features=ExtractANNFeature.extractANNFeature(mat);
+				trainData.push_back(features);
+			}
+		}
+		System.out.println("trainData: "+trainData.rows()+", "+trainData.cols());
+//		ANN_MLP ann;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		trainANNModel();
+	}
+}

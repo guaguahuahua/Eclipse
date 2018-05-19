@@ -1,0 +1,23 @@
+package com.xjtu;
+
+public class UniquePath {
+
+	/**
+	 * 在给定矩阵中寻找从开始位置到结束位置的路径的数目
+	 * @param m 行数
+	 * @param n 列数
+	 * @return 
+	 */
+    public int uniquePaths(int m, int n) {
+        
+    	
+    	
+    	
+    	return 0;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.xjtu.algorithm;
+
+public class ReconstructBintree {
+
+	public static Node reconstructBintree() {}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

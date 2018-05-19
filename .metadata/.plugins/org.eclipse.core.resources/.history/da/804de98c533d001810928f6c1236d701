@@ -1,0 +1,58 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OnesInBinNum {
+
+	/**
+	 * 统计二进制数中1的个数
+	 * 这样的做法对于负数来讲是行不通的， java中数值使用的是补码表示，
+	 * 所以负数在右移的过程中左边添加的都是1，这样使用while循环想将负数变为0是不可能的
+	 * 会陷入无限循环的情形，因为java中int类型的变量占用4B那么我们使用32位来依次的比对，从而避免这种情况
+	 * @param list
+	 * @return
+	 */
+	public static int onesInBinNum(List<Integer> list) {
+		
+		for(int i=0; i<list.size(); i++) {
+			int count=0;
+			int temp=list.get(i);
+			while(temp!=0) {
+				int t=temp&1;
+				if(t==1) {
+					count++;
+				}
+				temp=temp>>1;
+			}
+			System.out.print(count+"\t");
+		}
+		return 0;
+	}
+	
+	/**
+	 * 因为负数是补码表示，所以右移是无法将它变为0，所以使用32位来控制比较的次数
+	 * @param list
+	 */
+	public static void onesInBinNum_1(List<Integer> list) {
+		
+		for(int i=0; i<list.size(); i++) {
+			int temp=list.get(i);
+			//对32位依次的比对
+			for(int i=0; i<32; i++) {
+				
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> list=new ArrayList<Integer>();
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(-1);
+		onesInBinNum(list);
+	}
+
+}

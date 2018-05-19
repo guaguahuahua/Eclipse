@@ -1,0 +1,25 @@
+package com.util;
+
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class Connect {
+	
+	private HttpURLConnection urlconn;
+	private URL url;
+	String location="http://211.67.107.38/jwweb/ZNPK/KBFB_LessonSel.aspx";
+	public void connect() {
+		try {
+			url=new URL(location);
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String []args) {
+		Connect conn=new Connect();
+		conn.connect();
+	}
+}

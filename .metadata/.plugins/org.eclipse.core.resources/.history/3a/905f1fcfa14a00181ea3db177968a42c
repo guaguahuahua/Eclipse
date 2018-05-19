@@ -1,0 +1,15 @@
+package com.xjtu.algorithm;
+
+public class JudgeShunzi {
+
+	public static boolean judgeShunzi(int []nums) {
+		\
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

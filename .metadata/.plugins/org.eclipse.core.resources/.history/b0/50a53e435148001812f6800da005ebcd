@@ -1,0 +1,19 @@
+package com.xjtu.algorithm;
+/**
+ * 只包含因子2，3，5数称为丑数，6，8是丑数，而14不是，因为包含了7
+ * 一般的认为1是第一个丑数
+ * @author Administrator
+ *
+ */
+public class UglyNumber {
+
+	public static int uglyNumber() {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

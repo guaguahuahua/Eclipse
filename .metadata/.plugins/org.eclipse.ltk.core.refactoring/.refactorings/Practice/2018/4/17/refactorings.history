@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;t&apos; in &apos;com.xjtu.algorithm.SumIsS.sumIsTwoNums(...)&apos; to &apos;sum&apos;&#x0D;&#x0A;- Original project: &apos;Practice&apos;&#x0D;&#x0A;- Original element: &apos;com.xjtu.algorithm.SumIsS.sumIsTwoNums(int[], int).t&apos;&#x0D;&#x0A;- Renamed element: &apos;t&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;t&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.xjtu.algorithm{SumIsS.java[SumIsS~sumIsTwoNums~\[I~I@t!966!987!970!970!I!0!false" name="sum" references="true" stamp="1524821250953" version="1.0"/>
+</session>

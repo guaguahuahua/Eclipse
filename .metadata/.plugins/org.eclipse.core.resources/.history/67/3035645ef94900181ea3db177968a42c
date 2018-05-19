@@ -1,0 +1,29 @@
+package com.xjtu.algorithm;
+
+import java.util.List;
+
+/**
+ * 给定一个正整数s，求和为这个正整数的所有序列
+ * @author Administrator
+ *
+ */
+public class SumIsS {
+
+	/**
+	 * 暴力法
+	 * @param s
+	 * @return
+	 */
+	public static List<List<Integer>> sumIsS(int s){
+		for() {
+			
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

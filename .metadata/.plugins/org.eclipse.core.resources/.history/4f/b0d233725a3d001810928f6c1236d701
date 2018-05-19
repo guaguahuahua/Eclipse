@@ -1,0 +1,13 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求给定浮点数的整数次幂
+ * @author Administrator
+ *
+ */
+public class Power {
+
+	public static double power(double base, int exponent) {
+		return 0.0
+	}
+}

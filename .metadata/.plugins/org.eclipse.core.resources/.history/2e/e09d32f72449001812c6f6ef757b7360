@@ -1,0 +1,17 @@
+package com.xjtu.algorithm;
+
+/**
+ * 统计一个元素在排序数组中出现的次数
+ * @author Administrator
+ *
+ */
+public class CountTimesInSortedArray {
+
+	public static int countTimesInSortedArray() {}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

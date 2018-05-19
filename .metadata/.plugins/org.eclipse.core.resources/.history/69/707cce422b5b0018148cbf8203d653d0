@@ -1,0 +1,17 @@
+package com.xjtu;
+
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.BlockJUnit4ClassRunner;
+
+@RunWith(BlockJUnit4ClassRunner.class)
+class TestOneInterfaceImpl {
+
+	@Test
+	void test() {
+		OneInterface one=new OneInterfaceImpl();
+		String res=one.getName("zhouyadong");
+		System.out.println(res);
+	}
+
+}

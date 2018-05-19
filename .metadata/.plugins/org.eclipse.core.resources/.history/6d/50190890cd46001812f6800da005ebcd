@@ -1,0 +1,42 @@
+package com.xjtu.algorithm;
+
+import java.util.Arrays;
+
+/**
+ * 找到数组中出现次数超过一般的元素
+ * @author Administrator
+ *
+ */
+public class FindHalfTimesElement {
+
+	
+	public static int findHalfTimesElement(int []nums) {
+		Arrays.sort(nums);
+		//数组一半的长度
+		int max=nums.length/2;
+		//统计元素出现的次数
+		int times=0;
+		//存放超过一半的元素
+		int ele=0;
+		int l=0, r=1; 
+		while(r<nums.length) {
+			if(nums[l]==nums[r]) {
+				times++;
+			}else {
+				if(times>max) {
+					ele=nums[l];
+					break;
+				}
+				//如果没找到
+			}
+			
+		}
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

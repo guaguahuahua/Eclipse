@@ -1,0 +1,14 @@
+package com.xjtu.algorithm;
+
+public class ExpressionCalculation {
+
+	public static int expressionCalculation(String str) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

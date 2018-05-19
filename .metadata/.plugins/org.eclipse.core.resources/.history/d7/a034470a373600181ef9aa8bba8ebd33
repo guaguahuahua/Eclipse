@@ -1,0 +1,94 @@
+package com.xjtu.algorithm;
+
+public class CountOnes {
+	
+	/**
+	 * 统计从1到给定整数n中，十进制的1出现的次数
+	 * 直接思路：暴力破解,brute-force遍历每个数字，并统计其中1的数量
+	 * 但是统计1的数量也有两种方式，第一种是字符串的形式，第二种是求整数的
+	 * 每个位上的独立的数字的形式
+	 * @param n
+	 * @return
+	 */
+	public static int countOnes(int n) {
+		
+		if(n<=0) {
+			System.out.println("参数n的输入有误！");
+			return -1;
+		}	
+		int total=0;
+		//统计1--n上面所有数的1的个数
+		for(int i=1; i<=n; i++) {
+			total+=count(i);
+		}
+		return total;
+	}
+	
+	/**
+	 * 求整数n的每个位上面的为1的个数
+	 * @param n
+	 * @return
+	 */
+	public static int count(int n) {
+		
+		int count=0;
+		while(n!=0) {
+			//取个位数
+			int ge=n%10;
+			if(ge==1) {
+				count++;
+			}
+			n/=10;
+		}
+		return count;
+	}
+	
+	/**
+	 * 使用字符串的方式求1--n中十进制1的个数
+	 * @param n
+	 * @return
+	 */
+	public static int countOnes_1(int n) {
+		
+		if(n<=0) {
+			System.out.println("参数n输入有误！");
+			return -1;
+		}
+		
+		int total=0;
+		//遍历1--n
+		for(int i=1; i<=n; i++) {
+			//将i转化为字符串形式
+			String temp=i+"";
+			//对字符串形式的数字进行遍历
+			for(int j=0; j<temp.length(); j++) {
+				//如果字符串形式的数某个位置上为1，那么计数器+1
+				if(temp.charAt(j)=='1') {
+					total+=1;
+				}
+			}
+		}		
+		return total;
+	}
+	
+	/*
+	 * 以上求解过程都是O(n)时间复杂度的，现在需要一个O(1)时间复杂度的方法
+	 */
+	
+	/**
+	 * 使用O(k)算法k为给定整数的长度，计算可能为
+	 * @param n
+	 * @return
+	 */
+	public static int countOnes_2(int n) {
+		
+		
+		return 0;
+	}
+	
+	public static void main(String []args) {
+		int n=76;
+		int res=countOnes(n);
+		System.out.println(res);
+	}
+}

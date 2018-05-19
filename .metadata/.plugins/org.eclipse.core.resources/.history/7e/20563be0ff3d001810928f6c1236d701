@@ -1,0 +1,31 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 调整数组中奇数和偶数位置，使得奇数在数组的前半部分，偶数在后半部分
+ * 并且奇数和偶数的相对位置不会发生变化
+ * @author Administrator
+ *
+ */
+public class AdjustArray {
+
+	/**
+	 * 直接使用两个集合分别存放奇数和偶数，之后再依次的将集合中元素放回到数组中
+	 * @param nums
+	 */
+	public static void adjustArray(int []nums) {
+		List<Integer> odd=new ArrayList<Integer>();
+		List<Integer> even=new ArrayList<Integer>();
+		for() {
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

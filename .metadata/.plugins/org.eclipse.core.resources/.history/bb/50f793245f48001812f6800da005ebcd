@@ -1,0 +1,38 @@
+package com.xjtu.algorithm;
+
+/**
+ * 找到字符串中第一个只出现一次的字符
+ * @author Administrator
+ *
+ */
+public class FindTheFirstCharAppearedOnce {
+
+	/**
+	 * 使用indexOf lastIndexOf方法来判定一个字符是否是第一次出现
+	 * @param s
+	 * @return 第一个出现一次字符的位置
+	 */
+	public static int findTheFirstCharAppearedOnce(String s) {
+		
+		if(s.length()==0) {
+			return -1;
+		}
+		
+		for(int i=0; i<s.length(); i++) {
+			//获取当前字符
+			char c=s.charAt(i);
+			//如果第一次出现的位置和最好一次出现的位置相同
+			if(s.indexOf(c)==s.lastIndexOf(c)) {
+				return i;
+			}
+		}
+		
+		return -1;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s=""
+	}
+
+}

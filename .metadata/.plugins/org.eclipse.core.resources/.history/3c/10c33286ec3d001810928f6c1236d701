@@ -1,0 +1,116 @@
+package com.xjtu.algorithm;
+
+/**
+ * 打印从1到最大n位数
+ * @author Administrator
+ *
+ */
+public class PrintOneToMaxN {
+
+	/**
+	 * n是[1,5]区间内的正整数
+	 * 根据给定的n生成最大的n位数，然后通过遍历的方式实现
+	 * 如果直接实现，那么最大的数可能就会超出基本类型的范围
+	 * @param n
+	 */
+	public static void printOneToMaxN(int n) {
+		
+		if(n<1 || n>5) {
+			
+			System.out.println("参数n越界！");
+			return;
+		}
+		int max=0;
+		//生成最大的n位数
+		while(n>=1) {
+			max=max+9*(int)Math.pow(10,n-1);
+			n--;
+		}
+		
+		//输出从1到最大的n位数之间的所有数
+		for(int i=1; i<=max; i++) {
+//			System.out.println(i);
+		}
+		System.out.println("end");
+	}
+	
+	/**
+	 * 通过使用数组的方式来实现遍历
+	 * 申请长度为n+1的整型数组，每次给最低位加1，不断遍历
+	 * 终止条件为：数组的第0位为1，也就是发生了溢出
+	 * @param n
+	 */
+	public static void printOneToMaxN_1(int n) {
+		
+		int[] max=new int[n+1];
+		int low=max.length-1;
+		
+		//计算最低位加1之后产生进位
+		if(max[low]+1>9) {
+			max[low]=0;
+			//逐位判断是否进位
+			for(int pos=max.length-2; pos>=0; pos--) {
+				if(max[pos]+1>9) {
+					max[pos]=0;
+					//继续判断下个位置，使用if语句
+					
+				}else {
+					break;
+				}
+			}
+			print(max);
+		//最低位加1之后没有产生进位	
+		}else {			
+				
+		}
+		
+	}
+	
+	/**
+	 * 给数组对应的pos位置+1
+	 * @param nums
+	 * @param pos
+	 */
+	public static void addOne(int []nums, int pos) {
+
+		//递归的出口
+		if(pos<0) {
+			return;
+		}		
+		//如果当前位发生进位，那么就递归的判断高位是否也发生了进位
+		if(nums[pos]+1>9) {
+			nums[pos]=0;
+			addOne(nums, pos-1);
+		}else {
+			return ;
+		}
+	}
+	
+	
+	/**
+	 * 输出一个数组中的所有非零元素
+	 * @param nums
+	 */
+	public static void print(int []nums) {
+		
+		boolean flag=false;
+		
+		for(int i=0; i<nums.length; i++) {
+			//寻找第一个不为0的元素
+			if(nums[i]!=0 && flag==false) {
+				flag=true;
+			}
+			if(flag) {
+				System.out.print(nums[i]);	
+			}
+			
+		}
+		System.out.println();
+	}
+	
+	public static void main(String []args) {
+		int []nums= {0,0,0,1,0,2,3};
+		print(nums);
+//		printOneToMaxN(9);
+	}
+}

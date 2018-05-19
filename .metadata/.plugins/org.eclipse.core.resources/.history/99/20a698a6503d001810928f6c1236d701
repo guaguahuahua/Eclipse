@@ -1,0 +1,40 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OnesInBinNum {
+
+	/**
+	 * 统计二进制数中1的个数
+	 * @param list
+	 * @return
+	 */
+	public static int onesInBinNum(List<Integer> list) {
+		
+		for(int i=0; i<list.size(); i++) {
+			int count=0;
+			int temp=list.get(i);
+			while(temp!=0) {
+				int t=temp&1;
+				if(t==1) {
+					count++;
+				}
+				t=t>>1;
+			}
+			System.out.print(count+"\t");
+		}
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Integer> list=new ArrayList<Integer>();
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		list.add(-1);
+		
+	}
+
+}

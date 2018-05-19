@@ -1,0 +1,18 @@
+package Test.JunitTest;
+
+import org.junit.jupiter.api.Test;
+
+class TestOneInterface{
+
+/*	public TestOneInterface(String springXmlPath) {
+		super("classpath*:spring-ioc.xml");
+	}*/
+	
+	@Test
+	void test() {
+		OneInterfaceImpl one=new OneInterfaceImpl();
+		String res=one.getName("zhouyadong");
+		System.out.println(res);
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求子数组的最大的和
+ * @author Administrator
+ *
+ */
+public class MaxSubArray_1 {
+
+	
+	public static int maxSubArray_1(int []nums) {
+		int max=Integer.MIN_VALUE;
+		for(int i=0; i<nums.length; i++) {
+			if() {
+				
+			}
+		}
+		return 0;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums={6,-3,-2,7,-15,1,2,2};
+	}
+
+}

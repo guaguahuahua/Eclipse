@@ -1,0 +1,13 @@
+package com.xjtu.algorithm;
+
+public class FloydProblem {
+	public static int final inf=
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]e= {
+				{}
+		}
+	}
+
+}

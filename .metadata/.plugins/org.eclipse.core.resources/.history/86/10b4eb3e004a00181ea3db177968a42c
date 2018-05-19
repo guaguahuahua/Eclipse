@@ -1,0 +1,108 @@
+package com.xjtu.algorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 给定一个正整数s，求和为这个正整数的所有序列
+ * @author Administrator
+ *
+ */
+public class SumIsS {
+
+	/**
+	 * 暴力法
+	 * @param s
+	 * @return
+	 */
+	public static List<List<Integer>> sumIsS(int s){
+
+		List<List<Integer>> list=new ArrayList<List<Integer>>();
+		//最小的长度要求是2，最大的长度我们设定为不超过s的一半
+		for(int len=2; len<=s/2+1; len++) {
+			
+			for(int i=0; i<s; i++) {
+				int temp=0;
+				List<Integer> tempList=new ArrayList<Integer>();
+				//从第i个元素开始取出len个元素求和
+				for(int j=i; j<i+len; j++) {
+					tempList.add(j);
+					temp=temp+j;
+				}
+				if(temp==s) {
+					list.add(tempList);
+				}
+			}
+		}
+		return list;
+	}
+	
+	/**
+	 * 使用类似滑动窗口的方式进行
+	 * @param s
+	 * @return
+	 */
+	public static List<Integer> sumIsS_1(int s){
+		//首先获得一个数组，长度为s
+		int []nums=new int[s];
+		for(int i=0; i<nums.length; i++) {
+			nums[i]=i+1;
+		}
+		List<Integer> list=new ArrayList<Integer>();
+		int l=0, r=1;
+		int sum=nums[l];
+		List<Integer> tempList=new ArrayList<Integer>();
+		tempList.add(nums[l]);
+		while(r<nums.length) {
+			if(sum<s) {
+				sum=sum+nums[r];
+				tempList.add(nums[t]);
+				r++;
+			}else if(sum==) {
+				
+			}
+		}
+		return null;
+	}
+	
+	
+	/**
+	 * 递增数组，求两个数，使得他们的和为s
+	 * @param nums
+	 * @param s
+	 * @return
+	 */
+	public static List<Integer> sumIsTwoNums(int []nums, int s){
+
+		List<Integer> list=new ArrayList<Integer>();
+		//
+		int l=0; 
+		int r=nums.length-1;
+		while(l<r) {
+			int sum=nums[l]+nums[r];
+			if(sum==s) {
+				list.add(nums[l]);
+				list.add(nums[r]);
+				//一开始没有添加这个跳出的语句，电脑差点死机了
+				break;
+			}else if(sum>s){
+				r--;
+			}else if(sum<s) {
+				l++;
+			}
+		}
+		return list;
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int s=15;
+		int []nums= {1,2 ,4,7 ,11,15};
+		List res=sumIsTwoNums(nums, s);
+		System.out.println(res);
+//		List res=sumIsS(s);
+//		System.out.println(res);
+	}
+
+}

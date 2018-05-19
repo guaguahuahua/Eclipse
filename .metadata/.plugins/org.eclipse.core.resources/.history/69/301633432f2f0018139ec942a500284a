@@ -1,0 +1,16 @@
+package com.xjtu.algorithm;
+
+import java.util.List;
+
+public class Find2Numbers {
+
+	public static List<Integer> find2Numbers(){
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

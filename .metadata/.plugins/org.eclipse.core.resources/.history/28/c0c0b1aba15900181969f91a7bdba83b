@@ -1,0 +1,35 @@
+package dao;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+
+import entity.Person;
+
+@Repository
+public class PersonDao {
+	
+	@Resource private SessionFactory sessionFactory;
+	public Session getSession() {
+		
+	}
+	
+	public List<Person> selectPersons(){
+		return null;
+	}
+	
+	public void addPerson(Person p) {
+		
+	}
+	
+	public void delPerson(Person p) {
+		
+	}
+	
+	public void updatePerson(Person p) {
+		
+	}
+}

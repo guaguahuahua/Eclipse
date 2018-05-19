@@ -1,0 +1,32 @@
+package com.xjtu;
+
+public class ValidTriangleNumber {
+
+	/**
+	 * 获得三角形数，使用最朴素的算法， 枚举，从数组一个到最后一个
+	 * @param nums
+	 * @return
+	 */
+    public static int triangleNumber(int[] nums) {
+        int count=0;
+        for(int index=0;index<=nums.length-1-2;index++) {
+        	for(int i=index+1;i<=nums.length-1-1;i++) {
+        		if(nums[index]+nums[i]>nums[i+1] && 
+        				nums[index]+nums[i+1]>nums[i] && 
+        						nums[i+1]+nums[i]>nums[index]) { //满足三角形的三边规则，那么count自增，否则继续下一轮
+        			count++;
+        		}
+        	}
+        }
+    	return count;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int []nums= {2,2,3,4,9,562,5,3,78,56,16,456,46};
+//		int []nums= {};
+		int []nums= {1,1,1};
+		int res=triangleNumber(nums);
+		System.out.println("triangle number :"+res);
+	}
+
+}

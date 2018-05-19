@@ -1,0 +1,8 @@
+package com.util;
+
+public class Connect {
+	
+	public void connect() {
+				
+	}
+}

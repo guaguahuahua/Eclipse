@@ -1,0 +1,29 @@
+package com.xjtu.algorithm;
+
+public class DjkstraProblem {
+
+	//如果不存在路径，那么两个顶点之间的距离为最大值
+	public static final int inf=Integer.MAX_VALUE;
+	
+	
+	/**
+	 * 给定边集合求从第一个顶点到其他顶点的最短距离
+	 * @param e
+	 */
+	public static void dijkstraProblem(int [][]e) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]e= {
+				{0,1,12,inf, inf, inf},
+				{inf, 0,9,3,inf, inf},
+				{inf, inf, 0,inf, 5,inf},
+				{inf, inf, 4, 0, 13, 15},
+				{inf, inf,inf,inf,0,4},
+				{inf, inf, inf, inf, inf, -}
+		};
+	}
+
+}

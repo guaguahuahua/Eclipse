@@ -1,0 +1,11 @@
+package com.xjtu;
+
+public class OneInterfaceImpl implements OneInterface{
+
+	@Override
+	public String getName(String name) {
+		// TODO Auto-generated method stub
+		return name+":"+"";
+	}
+
+}

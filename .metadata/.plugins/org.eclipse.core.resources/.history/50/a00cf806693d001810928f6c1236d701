@@ -1,0 +1,10 @@
+package com.xjtu.algorithm;
+
+/**
+ * 打印从1到最大n位数
+ * @author Administrator
+ *
+ */
+public class PrintOneToMaxN {
+
+}

@@ -1,0 +1,23 @@
+package com.xjtu.algorithm;
+
+/**
+ * 调整数组中奇数和偶数位置，使得奇数在数组的前半部分，偶数在后半部分
+ * @author Administrator
+ *
+ */
+public class AdjustArray {
+
+	/**
+	 *
+	 * @param nums
+	 */
+	public static void adjustArray(int []nums) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

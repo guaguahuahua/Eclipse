@@ -1,0 +1,24 @@
+package com.xjtu.algorithm;
+
+import java.util.Arrays;
+
+/**
+ * 找到数组中出现次数超过一般的元素
+ * @author Administrator
+ *
+ */
+public class FindHalfTimesElement {
+
+	
+	public static int findHalfTimesElement(int []nums) {
+		Arrays.sort(nums);
+		int times=nums.length/2
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

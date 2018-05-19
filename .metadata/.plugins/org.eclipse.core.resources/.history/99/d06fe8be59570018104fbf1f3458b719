@@ -1,0 +1,20 @@
+package com.action;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.struts2.ServletActionContext;
+
+import com.dao.impl.RepairDaoImple;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class RepairAction extends ActionSupport{
+	
+	private RepairDaoImple rdi=new RepairDaoImple();
+	public String submit() {
+		HttpServletRequest repairRequest=ServletActionContext.getRequest();
+		String equipName=repairRequest.getParameter("equipName");
+		String problem=repairRequest.getParameter("problem");
+		String phone=repairRequest.getParameter("");
+		return SUCCESS;
+	}
+}

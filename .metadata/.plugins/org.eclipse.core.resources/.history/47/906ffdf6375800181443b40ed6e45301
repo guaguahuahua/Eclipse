@@ -1,0 +1,137 @@
+package com.test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.Test;
+
+import com.xjtu.interview.PrintMatrix;
+
+public class TestPrintMatrix {
+	PrintMatrix print=new PrintMatrix();
+	ArrayList<Integer> testRes;
+	ArrayList<Integer> corRes=new ArrayList<Integer>();
+	String output="result:";
+	
+	@Test
+	void test() {
+		int  [][]a=
+			{
+					{1,2},
+					{3,4}
+			};
+		
+		corRes.add(1);
+		corRes.add(2);
+		corRes.add(4);
+		corRes.add(3);
+		testRes=print.printMatrix(a);
+		assertEquals(corRes, testRes);
+	}
+	
+	@Test
+	void test1(){
+		int [][]a= 
+			{
+					{1}	
+			};
+		testRes=print.printMatrix(a);
+		corRes.add(1);
+		assertEquals(corRes, testRes);
+	}
+	
+	@Test
+	void test2() {
+    	int [][] a= 
+		{
+						{ 1,  2,  3,  4 }, 
+						{ 5,  6,  7,  8 },
+						{ 9,  10, 11, 12 },
+						{ 13, 14, 15, 16 }
+		};
+    	testRes=print.printMatrix(a);
+    	corRes.add(1);
+    	corRes.add(2);
+    	corRes.add(3);
+    	corRes.add(4);
+    	corRes.add(8);
+    	corRes.add(12);
+    	corRes.add(16);
+    	corRes.add(15);
+    	corRes.add(14);
+    	corRes.add(13);
+    	corRes.add(9);
+    	corRes.add(5);
+    	corRes.add(6);
+    	corRes.add(7);
+    	corRes.add(11);
+    	corRes.add(10);
+    	assertEquals(corRes, testRes);
+	}
+	
+	@Test
+	void test3() {
+		int [][]a= {
+				{ 1,  2,  3,  4,  5 }, 
+				{ 6,  7,  8,  9,  10 }, 
+				{ 11, 12, 13, 14, 15 },
+				{ 16, 17, 18, 19, 20 },
+				{ 21, 22, 23, 24, 25 }
+		};
+		testRes=print.printMatrix(a);
+		corRes.add(1);
+		corRes.add(2);
+		corRes.add(3);
+		corRes.add(4);
+		corRes.add(5);
+		corRes.add(10);
+		corRes.add(15);
+		corRes.add(20);
+		corRes.add(25);
+		corRes.add(24);		
+		corRes.add(23);
+		corRes.add(22);
+		corRes.add(21);
+		corRes.add(16);
+		corRes.add(11);		
+		corRes.add(6);
+		corRes.add(7);
+		corRes.add(8);
+		corRes.add(9);
+		corRes.add(14);		
+		corRes.add(19);
+		corRes.add(18);
+		corRes.add(17);
+		corRes.add(12);
+		corRes.add(13);
+		assertEquals(testRes, corRes);
+	}
+	
+	@Test
+	void test4() {
+		int [][]a=
+			{
+					{1},
+					{2},
+					{3},
+					{4},
+					{5}
+			};
+		testRes=print.printMatrix(a);
+		corRes.add(1);
+		corRes.add(2);
+		corRes.add(3);
+		corRes.add(4);
+		corRes.add(5);
+		assertEquals(testRes, corRes);
+	}
+	
+	@Test
+	void test5() {
+		int [][]a= 
+			{
+					
+			};
+	}
+}

@@ -1,0 +1,12 @@
+package com.xjtu.algorithm;
+
+public class StackSimulateQueue {
+
+	public static void append() {}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

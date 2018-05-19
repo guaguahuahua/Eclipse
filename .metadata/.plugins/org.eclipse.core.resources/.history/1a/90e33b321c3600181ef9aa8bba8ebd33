@@ -1,0 +1,20 @@
+package com.xjtu.algorithm;
+
+public class CountOnes {
+	
+	/**
+	 * 统计从1到给定整数n中，十进制的1出现的次数
+	 * 直接思路：暴力破解,brute-force遍历每个数字，并统计其中1的数量
+	 * 但是统计1的数量也有两种方式，第一种是字符串的形式，第二种是求整数的
+	 * 每个位上的独立的数字的形式
+	 * @param n
+	 * @return
+	 */
+	public static int countOnes(int n) {
+		return 0;
+	}
+	
+	public static void main(String []args) {
+		
+	}
+}

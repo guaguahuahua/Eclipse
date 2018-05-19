@@ -1,0 +1,32 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求给定浮点数的整数次幂
+ * @author Administrator
+ *
+ */
+public class Power {
+
+	/**
+	 * 第一种解法，使用java提供的math方法进行计算
+	 * @param base
+	 * @param exponent
+	 * @return
+	 */
+	public static double power(double base, int exponent) {
+		
+		return Math.pow(base, exponent);
+	}
+	
+	public static double power_1(double base, int exponent) {
+		
+		return 0.0;
+	}
+	
+	public static void main(String []args) {
+		double base=2.0;
+		int exponent=3;
+		double res=power(base, exponent);
+		System.out.println(res);
+	}
+}

@@ -1,0 +1,11 @@
+package com.xjtu.LinkedList;
+
+
+public class FindKthElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

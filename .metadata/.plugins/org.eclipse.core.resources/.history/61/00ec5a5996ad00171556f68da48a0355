@@ -1,0 +1,18 @@
+package com.xjtu.algorithm;
+
+public class Test {
+	
+	/**
+	 * 仿真实现一下边界跟踪算法的效果
+	 * @param data
+	 */
+	public static void borderFollowing(int [][]data) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]data=new int[8][8];
+		
+	}
+
+}

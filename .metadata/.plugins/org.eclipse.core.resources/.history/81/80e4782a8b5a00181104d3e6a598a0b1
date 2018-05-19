@@ -1,0 +1,16 @@
+package com.xjtu.springmvc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping(value="/hello")
+public class HelloController{
+
+	@RequestMapping(value="/mvc")
+	public String printHello() {
+		System.out.println("come here");
+		return "index";
+	}
+   
+}

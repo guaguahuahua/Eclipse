@@ -1,0 +1,23 @@
+package com.xjtu.algorithm;
+
+/**
+ * 找到字符串中第一个只出现一次的字符
+ * @author Administrator
+ *
+ */
+public class FindTheFirstCharAppearedOnce {
+
+	/**
+	public static char findTheFirstCharAppearedOnce(String s) {
+		
+		
+		
+		return ' ';
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

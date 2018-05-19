@@ -1,0 +1,23 @@
+package com.xjtu.algorithm;
+
+public class FindIn2DArray {
+	
+	/**
+	 * 在给定的二维数组中寻找特定的数是否存在，存在返回true,不存在返回false
+	 * brute force法
+	 * @param nums
+	 * @return
+	 */
+	public static boolean find(int [][]nums) {
+		
+		//双层for循环，但是没有利用题目给定的从左到右从上倒下依次是有序的
+		for(int row=0; row<nums.length; row++) {
+			
+		}
+		return false;
+	}
+	
+	public static void main(String []args) {
+		
+	}
+}

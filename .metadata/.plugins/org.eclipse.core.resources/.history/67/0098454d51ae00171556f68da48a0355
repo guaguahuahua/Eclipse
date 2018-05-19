@@ -1,0 +1,28 @@
+package com.xjtu.algorithm;
+
+public class Rebuild {
+
+	public static void borderFollowing(int [][]data) {
+		//遍历整个图象之后算法结束
+		for(int row=0; row<data.length; row++) {
+			for() {
+				
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [][]data= {{0,0,0,0,0,0,0,0},
+				   {0,0,1,1,1,1,0,0},
+				   {0,1,1,1,1,1,0,0},
+				   {0,1,1,0,0,1,1,0},
+				   {0,1,1,0,0,1,1,0},
+				   {0,1,1,1,1,1,1,0},
+				   {0,0,1,1,1,1,0,0},
+				   {0,0,0,0,0,0,0,0}
+				   };
+	borderFollowing(data);
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.xjtu.algorithm;
+
+public class ContinueLeftMove {
+
+	public static String continueLeftMove(String str, int n) {
+		int len=n%str.length();
+		String cut=str.substring(0, len+1);
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="abcXYZdef";
+		int n=3;
+		String res=continueLeftMove(s, n);
+		System.out.println(res);
+	}
+
+}

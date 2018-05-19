@@ -1,0 +1,17 @@
+package com.xjtu.algorithm;
+
+/**
+ * 给定一个正整数s，求和为这个正整数的所有序列
+ * @author Administrator
+ *
+ */
+public class SumIsS {
+
+	public static List<List<Integer>>
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

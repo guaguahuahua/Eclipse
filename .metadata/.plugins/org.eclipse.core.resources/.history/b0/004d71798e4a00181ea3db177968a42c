@@ -1,0 +1,49 @@
+package com.xjtu.algorithm;
+
+/**
+ * 逆转一个字符串
+ * @author Administrator
+ *
+ */
+public class ReverseAString_1 {
+
+	/**
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static String reverseAString(String str) {
+		
+		//将整个字符串逆转
+		String step1=reverse(str);
+		//将逆转之后的字符串使用空格分开
+		String []strs=step1.split("\\s+");
+		StringBuilder sb=new StringBuilder();
+		//依次的将每个单词进行逆转
+		for(int i=0; i<strs.length; i++) {
+			String t=reverse(strs[i]);
+			sb.append(t);
+		}
+		return sb.toString();
+	}
+	
+	/**
+	 * 对给定的整个字符串进行逆转
+	 * @param str
+	 * @return
+	 */
+	public static String reverse(String str) {
+		
+		StringBuilder sb=new StringBuilder();
+		for(int i=str.length()-1; i>=0; i--) {
+			sb.append(str.charAt(i));
+		}
+		return sb.toString();
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s=""";
+	}
+
+}

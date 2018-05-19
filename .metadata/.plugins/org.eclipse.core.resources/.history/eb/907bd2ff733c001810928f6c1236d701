@@ -1,0 +1,17 @@
+package com.xjtu.algorithm;
+
+import com.xjtu.tree.Node;
+
+public class ReconstructBintree {
+
+	public static Node reconstructBintree() {
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []preOrder= {1,2,4,8,9,5,10,3,6,7};
+		int []inOrder= {}
+	}
+
+}

@@ -1,0 +1,16 @@
+package com.xjtu.algorithm;
+
+import java.util.List;
+
+public class CombinationsOfString {
+
+	public static List combinationsOfString() {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

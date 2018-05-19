@@ -1,0 +1,43 @@
+package com.xjtu;
+
+public class UniquePath {
+
+	/**
+	 * 在给定矩阵中寻找从开始位置到结束位置的路径的数目
+	 * 使用递归法完成
+	 * @param m 行数
+	 * @param n 列数
+	 * @return  所有路径的数目
+	 * 传进来的行数和列数与数组的编号是错位的，保险期间，转化为数组的行列索引
+	 */
+    public static int uniquePaths(int m, int n) {
+        
+    	int rows=m-1,cols=n-1;
+    	paths(rows,cols);
+    	
+    	return 0;
+    }
+    /**
+     * 使用该函数进行递归，
+     * @param rows 行索引
+     * @param cols 列索引
+     * @return
+     */
+    public static int paths(int rows,int cols) {
+    	if(rows==0 || cols==0) { //当走到了行边界或者是列边界，直接返回1，因为机器人的行走只有下和右两个方向
+    		return 1;
+    	}
+    	
+    	
+    	return 0;
+    }
+    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int m=3;
+		int n=3;
+		int res=uniquePaths(m,n);
+		System.out.print("nums of paths: "+res);
+	}
+
+}

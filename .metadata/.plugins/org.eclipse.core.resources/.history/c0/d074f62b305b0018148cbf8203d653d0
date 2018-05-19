@@ -1,0 +1,22 @@
+package Test.JunitTest;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class UnitTestBase {
+	private ClassPathXmlApplicationContext context;
+	
+	private String springXmlPath;
+	
+	public UnitTestBase(String springXmlPath) {
+		this.springXmlPath=springXmlPath;
+	}
+	
+	@Before
+	public void before() {
+		if() {
+			
+		}
+	}
+	
+}

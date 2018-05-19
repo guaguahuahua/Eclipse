@@ -1,0 +1,48 @@
+package com.xjtu.algorithm;
+/**
+ * 只包含因子2，3，5数称为丑数，6，8是丑数，而14不是，因为包含了7
+ * 一般的认为1是第一个丑数，返回第n个丑数
+ * @author Administrator
+ *
+ */
+public class UglyNumber {
+
+	/**
+	 * 暴力法，每个数轮流的整除2，3，5，直到商为1，如果2，3，5都无法整除，那么认为不是丑数
+	 * @param n
+	 * @return
+	 */
+	public static int uglyNumber(int n) {
+	
+		//首先认为1是一个丑数
+		int start=1;
+		n=n-1;
+		start=start+1;
+		while(n>0) {
+			boolean f1=false;
+			boolean f2=false;
+			boolean f3=false;
+			if(start%2==0) {
+				f1=true;
+				start=start/2;
+			}
+			if(start%3==0) {
+				f2=true;
+				start=start/3;
+			}
+			if(start%5==0) {
+				f3=true;
+				start=start/5;
+			}
+			
+		}
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

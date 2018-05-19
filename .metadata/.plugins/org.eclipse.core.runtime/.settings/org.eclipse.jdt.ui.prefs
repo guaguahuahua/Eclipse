@@ -1,0 +1,22 @@
+content_assist_autoactivation_delay=0
+content_assist_autoactivation_triggers_java=.
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.xjtu.DegreeOfAnArray$DegreeElement"><rhs name\="com.xjtu.DegreeOfAnArray$DegreeElement"/></lhs><lhs name\="org.opencv.features2d.Feature2D"><rhs name\="org.opencv.features2d.MSER"/></lhs><lhs name\="org.opencv.core.Algorithm"><rhs name\="org.opencv.features2d.MSER"/></lhs><lhs name\="org.opencv.features2d.MSER"><rhs name\="org.opencv.features2d.MSER"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.BufferedWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.BufferedWriter"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.BufferedWriter"/></lhs><lhs name\="java.io.BufferedWriter"><rhs name\="java.io.BufferedWriter"/></lhs><lhs name\="java.io.Reader"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.lang.Readable"><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="java.io.BufferedReader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="java.io.InputStreamReader"><rhs name\="java.io.InputStreamReader"/></lhs><lhs name\="com.xjtu.mystack.QueueSimulateStack"><rhs name\="com.xjtu.mystack.QueueSimulateStack"/></lhs><lhs name\="com.xjtu.interview.FindTheMinDistanceOfTwoGivenNums"><rhs name\="com.xjtu.interview.FindTheMinDistanceOfTwoGivenNums"/></lhs><lhs name\="com.xjtu.interview.TheFirstIndexOfSpecificNum"><rhs name\="com.xjtu.interview.TheFirstIndexOfSpecificNum"/></lhs><lhs name\="com.xjtu.interview.MergeTheSortedArray"><rhs name\="com.xjtu.interview.MergeTheSortedArray"/></lhs><lhs name\="com.xjtu.interview.IntersectionOfTwoArray"><rhs name\="com.xjtu.interview.IntersectionOfTwoArray"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.String"/></lhs></history>
+content_assist_number_of_computers=24
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+markOccurrences=false
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=13
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

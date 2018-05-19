@@ -1,0 +1,62 @@
+package com.xjtu.algorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 统计一个元素在排序数组中出现的次数
+ * @author Administrator
+ *
+ */
+public class CountTimesInSortedArray {
+
+	/**
+	 * 直接搜索遍历
+	 * @param nums
+	 * @param ele
+	 * @return
+	 */
+	public static int countTimesInSortedArray(int []nums, int ele) {
+		
+		int count=0;
+		for(int i=0; i<nums.length; i++) {
+			if(nums[i]==ele) {
+				count++;
+			}
+			if(nums[i]>ele) {
+				break;
+			}
+			
+		}
+		return count;
+	}
+	
+	/**
+	 * 比前一种方法低效，增加了存储，同时也遍历了整个数组，时间消耗增大
+	 * 使用map的形式获得每个数出现的次数，最后直接返回查找元素的次数
+	 * @param nums
+	 * @param ele
+	 * @return
+	 */
+	public static int countTimesInSortedArray_1(int []nums, int ele) {
+		Map<Integer, Integer> map=new HashMap<Integer, Integer>();
+		for(int i=0; i<nums.length; i++) {
+			map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
+		}
+		return map.get(ele);
+	}
+	
+	
+	public static int countTimesInSortedArray_2(int []nums, int ele) {
+		
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums= {1,2,2,2,2,2,2,3,4,5};
+		int res=countTimesInSortedArray_1(nums, 2);
+		System.out.println(res);
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.xjtu.algorithm;
+
+/**
+ * 使用两个栈模拟队列
+ * @author Administrator
+ *
+ */
+public class StackSimulateQueue {
+
+	LinkedList<Integer> stack1=new LinkedList<Integert>();
+	/**
+	 * 入队
+	 * @param data
+	 */
+	public static void append(int data) {
+		
+	}
+	
+	/**
+	 * 出队
+	 * @return
+	 */
+	public static int poll() {
+		return 0;
+	}
+	
+	/**
+	 * 判读队列是否为空
+	 * @return
+	 */
+	public static boolean isEmpty() {
+		
+		
+		return false;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

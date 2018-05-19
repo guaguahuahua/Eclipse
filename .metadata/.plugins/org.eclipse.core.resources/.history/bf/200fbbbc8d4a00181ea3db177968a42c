@@ -1,0 +1,30 @@
+package com.xjtu.algorithm;
+
+/**
+ * Äæ×ªÒ»¸ö×Ö·û´®
+ * @author Administrator
+ *
+ */
+public class ReverseAString_1 {
+
+	/**
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static String reverseAString(String str) {
+		
+		
+		return null;
+	}
+	
+	public static String reverse(String str) {
+		return null;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

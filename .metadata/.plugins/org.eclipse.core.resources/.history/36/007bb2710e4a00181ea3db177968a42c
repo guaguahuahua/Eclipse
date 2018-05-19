@@ -1,0 +1,27 @@
+package com.xjtu.algorithm;
+
+public class T1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char []c= {'a', 'c', 'e'};
+		
+		Character []c= {'a', 'c', 'e'};
+		String s = "";
+		s.copyValueOf(c, 2, 1)
+	}
+	
+	
+	static int k=9;
+	
+	
+	
+	String dg(char []c, String str) {
+		
+		for(int i=0; i<k; i++) {
+//			dg();
+		}
+		return null;
+	}
+
+}

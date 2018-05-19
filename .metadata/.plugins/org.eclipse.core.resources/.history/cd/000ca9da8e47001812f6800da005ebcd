@@ -1,0 +1,163 @@
+package com.xjtu.algorithm;
+
+import java.util.Arrays;
+
+/**
+ * 找到数组中k个最小的元素
+ * @author Administrator
+ *
+ */
+public class FindKMinValues {
+	
+	/**
+	 * 直接排序，排序之后取前k个元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues(int []nums, int k) {
+		Arrays.sort(nums);
+		int []res=new int[k];
+		for(int i=0; i<k; i++) {
+			res[i]=nums[i];
+		}
+		return res;
+	}
+	
+	/**
+	 * 使用选择排序的方法，但是只选择排序前k个元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues_1(int []nums, int k) {
+		
+		int []res=new int [k];
+		for(int i=0; i<k; i++) {
+			int min=nums[i];
+			int index=-1;
+			for(int j=i; j<nums.length; j++) {
+				if(nums[j]<min) {
+					min=nums[j];
+					index=j;
+				}
+			}
+			int temp=nums[i];
+			nums[i]=min;
+			nums[index]=temp;
+			res[i]=nums[i];
+		}
+		
+		return res;
+	}
+	
+	/**
+	 * 使用交换排序的方法求前k个元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues_2(int []nums, int k) {
+		
+		int[]res=new int[k];
+		for(int i=0; i<k; i++) {
+			
+			//我们将最小的k个元素交换到数组的最末尾去
+			for(int j=1; j<nums.length-i; j++) {
+				//如果前面的元素小于后面的元素，那么交换
+				if(nums[j-1]<nums[j]) {
+					int temp=nums[j-1];
+					nums[j-1]=nums[j];
+					nums[j]=temp;
+				}
+			}
+			res[i]=nums[nums.length-i-1];
+		}
+		return res;
+	}
+	
+	/**
+	 * 使用最小堆的方式获得前k个最小的元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues_3(int []nums, int k) {
+		//存放k个最小的值
+		int []res=new int[k];
+		for(int times=0, len=nums.length; times<k; times++) {
+			adjustHeap(nums, len);
+			res[times]=nums[0];
+			nums[0];
+			len--;
+		}
+		
+		return res;
+	}
+	
+	/**
+	 * 构建最小堆
+	 * @param nums
+	 * @parem pos	从该位置向下调整
+	 */
+	public static void createHeap(int []nums, int pos, int len) {
+		
+		int temp;
+		int child;
+		//temp存放的是根节点
+		for(temp=nums[pos]; 2*pos+1<len; ) {
+			child=2*pos+1;
+			//首先右子树存在，并且它的值小于左子树
+			if(child+1<nums.length && nums[child]>nums[child+1]) {
+				child++;
+			}
+			//判断子树和根节点的大小
+			if(nums[child]<temp) {
+				nums[pos]=nums[child];
+			}else {
+				break;
+			}
+			nums[child]=temp;
+			//从左子树或者右子树出发，再次遍历
+			pos=child;
+		}
+		
+	}
+	
+	/**
+	 * 调整堆
+	 * @param nums
+	 */
+	public static void adjustHeap(int []nums, int len) {
+		
+		//从最后一个根节点开始调整
+		for(int start=len/2; start>=0; start--) {
+			createHeap(nums, start, len);
+		}
+	}
+	
+	/**
+	 * 输出堆中的元素
+	 * @param nums
+	 */
+	public static void showHeap(int []nums) {
+		for(int i=0; i<nums.length; i++) {
+			System.out.print(nums[i]+"\t");
+		}
+		System.out.println();
+	}
+	
+	public static void main(String []args) {
+		int []nums= {4,5,1,6,2,7,3,8};
+		int k=4;
+		int []res=findKMinValues_3(nums, k);
+		for(int K:res) {
+			System.out.print(K+"\t");
+		}
+		
+//		showHeap(nums);
+//		adjustHeap(nums);
+//		showHeap(nums);
+	}
+	
+}

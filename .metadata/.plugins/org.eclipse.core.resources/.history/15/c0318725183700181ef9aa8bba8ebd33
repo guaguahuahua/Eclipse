@@ -1,0 +1,37 @@
+package com.xjtu.algorithm;
+
+public class FloydProblem {
+	public static final int  inf=Integer.MAX_VALUE;
+
+	/**
+	 * floyd算法实现
+	 * 通过添加中间节点来减少任意两个节点之间的距离
+	 * @param e
+	 */
+	public static void floydProblem(int [][]e) {
+		//首先实现添加一个中间节点a来减少距离值
+		for(int i=0; i<e.length; i++) {
+			for(int j=0; j<e.length; j++) {
+				if(e[i][j]>e[i][1]+e[1][j]) {
+					e[i][j]=e[i][1]+e[1][j];
+				}
+			}
+		}
+		
+	}
+	
+	public static void show(int [][]nums) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[][] e = { 
+				{ 0, 2, 6, 4 }, 
+				{ inf, 0, 4, inf }, 
+				{ 7, inf, 0, 1 }, 
+				{ 5, inf, 12, 0 } 
+				};
+	}
+
+}

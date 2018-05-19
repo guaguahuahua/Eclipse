@@ -1,0 +1,68 @@
+package com.xjtu.algorithm;
+
+import java.util.Arrays;
+
+/**
+ * 找到数组中k个最小的元素
+ * @author Administrator
+ *
+ */
+public class FindKMinValues {
+	
+	/**
+	 * 直接排序，排序之后取前k个元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues(int []nums, int k) {
+		Arrays.sort(nums);
+		int []res=new int[k];
+		for(int i=0; i<k; i++) {
+			res[i]=nums[i];
+		}
+		return res;
+	}
+	
+	/**
+	 * 使用选择排序的方法，但是只选择排序前k个元素
+	 * @param nums
+	 * @param k
+	 * @return
+	 */
+	public static int[] findKMinValues_1(int []nums, int k) {
+		
+		int []res=new int [k];
+		for(int i=0; i<k; i++) {
+			int min=nums[i];
+			int index=-1;
+			for(int j=i; j<nums.length; j++) {
+				if(nums[j]<min) {
+					min=nums[j];
+					index=j;
+				}
+			}
+			int temp=nums[i];
+			nums[i]=min;
+			nums[index]=temp;
+			res[i]=nums[i];
+		}
+		
+		return res;
+	}
+	
+	public static int[] findKMinValues_2(int []nums, int k) {
+		
+	}
+	
+	
+	public static void main(String []args) {
+		int []nums= {4,5,1,6,2,7,3,8};
+		int k=4;
+		int []res=findKMinValues_1(nums, k);
+		for(int K:res) {
+			System.out.print(K+"\t");
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.xjtu.algorithm;
+
+public class ContinueLeftMove {
+
+	/**
+	 * 按照理解，最大的移位长度就是字符串本身了，超过字符串长度的移位通过
+	 * 取余的形式可以得到
+	 * @param str
+	 * @param n
+	 * @return
+	 */
+	public static String continueLeftMove(String str, int n) {
+		int len=n%str.length();
+		//将两个字符串拼接在一起
+		String t=str+str;
+		String cut=t.substring(len, len+str.length());
+		return cut;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s="abcXYZdef";
+		int n=3;
+		String res=continueLeftMove(s, n);
+		System.out.println(res);
+	}
+
+}

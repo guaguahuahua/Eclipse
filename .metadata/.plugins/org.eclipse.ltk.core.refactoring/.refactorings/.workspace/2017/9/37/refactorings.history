@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;EasyPR-Java-master&apos;" deleteContents="true" description="Delete resource &apos;EasyPR-Java-master&apos;" element1="/EasyPR-Java-master" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1505464414316"/>
+</session>

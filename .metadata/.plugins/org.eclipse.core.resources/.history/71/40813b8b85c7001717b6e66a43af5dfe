@@ -1,0 +1,82 @@
+package com.xjtu.svm;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.opencv.core.Core;
+import org.opencv.core.Mat;
+import org.opencv.imgcodecs.Imgcodecs;
+
+public class ReadInPlate {
+
+	/**
+	 * 读入有车牌的训练集
+	 * @param hasPlate
+	 * @param label
+	 */
+	public static void readInPlateImg(List<Mat> hasPlate, List<Integer>label) {
+		String path="E:/HasPlate";
+		File file=new File(path);
+		//获得该路径下面的所有文件，并存放在文件数组中
+		File[] fileArray=file.listFiles();
+		if(fileArray.length==0) {
+			System.out.println("文件夹为空，没有图像读入！");
+		}
+		//创建存放图像的list
+		hasPlate=new ArrayList<Mat>(); 
+		label=new ArrayList<Integer>();
+		for(int i=0; i<fileArray.length; i++) {
+			//获得文件的绝对路径
+			path=fileArray[i].getAbsolutePath();
+			System.out.println(path);
+			//将该图像以mat 的格式读入
+			Mat tmp=Imgcodecs.imread(path);
+			//将该图像添加到对应的数组中去
+			hasPlate.add(tmp);
+			label.add(1);
+		}
+	}
+	
+	/**
+	 * 读入无车牌的训练集
+	 * @param noPlate
+	 * @param label
+	 */
+	public static void readInNoPlateImg(List<Mat>noPlate, List<Integer>label) {
+		String path="E:/NoPlate";
+		File file=new File(path);
+		File[] fileArray=file.listFiles();
+		if(fileArray.length==0) {
+			System.out.println("文件夹为空，没有图像读入！");
+		}
+		//创建存放图像的list
+		noPlate=new ArrayList<Mat>(); 
+		label=new ArrayList<Integer>();
+		for(int i=0; i<fileArray.length; i++) {
+			//获得文件的绝对路径
+			path=fileArray[i].getAbsolutePath();
+			System.out.println(path);
+			//将该图像以mat 的格式读入
+			Mat tmp=Imgcodecs.imread(path);
+			//将该图像添加到对应的数组中去
+			noPlate.add(tmp);
+			label.add(0);
+		}
+	}
+	public static void main(String []args) {
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		//加载有车牌和无车牌的图像，并并进行标记
+		List<Mat> hasPlate=new ArrayList<Mat>();
+		List<Integer> oneLabel=new ArrayList<Integer>();
+		readInPlateImg(hasPlate, oneLabel);
+		
+		List<Mat> noPlate=new ArrayList<Mat>();
+		List<Integer>zeroLabel=new ArrayList<Integer>();
+		readInNoPlateImg(noPlate, zeroLabel);
+
+		// 
+		
+		
+	}
+}

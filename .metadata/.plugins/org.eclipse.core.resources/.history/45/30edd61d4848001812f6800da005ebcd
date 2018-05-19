@@ -1,0 +1,24 @@
+package com.xjtu.algorithm;
+
+/**
+ * 给定整型数组，将数组中的元素组合为一个整数，该整数为所有组合中的最小值
+ * @author Administrator
+ *
+ */
+public class SmallestNumOfArray {
+
+	public static int smallestNumOfArray(int []nums) {
+		
+		return 0;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []nums= {3, 32, 321};
+		
+	}
+
+}

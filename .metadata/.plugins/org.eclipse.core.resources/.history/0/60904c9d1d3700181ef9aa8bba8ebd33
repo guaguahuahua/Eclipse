@@ -1,0 +1,22 @@
+package com.xjtu.algorithm;
+
+public class ExpressionCalculation {
+
+	/**
+	 * 根据后缀表达式计算值，通过栈的方式来实现
+	 * 表达式的内容只涉及正整数，只是模拟编译器计算的过程
+	 * @param str
+	 * @return
+	 */
+	public static int expressionCalculation(String str) {
+		System.out.println();
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str="2,10,6,3,/,-,7,*+";
+		expressionCalculation(str);
+	}
+
+}

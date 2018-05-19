@@ -1,0 +1,14 @@
+package com.xjtu.algorithm;
+
+public class DjkstraProblem {
+
+	public static void dijkstraProblem(int [][]e, ) {
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.xjtu.algorithm;
+
+/**
+ * 求给定浮点数的整数次幂
+ * @author Administrator
+ *
+ */
+public class Power {
+
+}

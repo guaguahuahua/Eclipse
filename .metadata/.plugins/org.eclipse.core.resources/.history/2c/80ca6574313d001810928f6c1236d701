@@ -1,0 +1,47 @@
+package com.xjtu.algorithm;
+
+public class MinValueOfRotatedArray {
+	
+	/**
+	 * 旋转数组中的最小元素
+	 * @param array
+	 * @return
+	 */
+	public static int minValueOfRotatedArray(int []array) {
+		
+		for(int i=1; i<array.length; i++) {
+			if(array[i]<array[i-1]) {
+				return array[i];
+			}
+		}
+		return -1;
+	}
+	
+	/**
+	 * 使用二分查找法实现旋转数组的最小值
+	 * 因为数组中存在两个有序的子数组，然后可以分别对两个子数组进行查找
+	 * 如果中间元素等于左边元素，那说明在第一个有序组里面，左指针需要向右移动
+	 * 如果中间元素小于等于右边元素，那么说明在第二个有序组里面，右指针需要向左移动
+	 * @param array
+	 * @return
+	 */
+	public static int minValueOfRotatedArray_1(int []array) {
+		
+		int left=0, right=array.length-1;
+		while(left<right) {
+			int mid=left+(right-left)/2;
+			if(array[mid]) {
+				
+			}
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int []array= {3,4,5,1,2};
+		int res=minValueOfRotatedArray(array);
+		System.out.println("minValue:"+res);
+	}
+
+}

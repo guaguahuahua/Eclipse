@@ -1,0 +1,17 @@
+package com.xjtu.algorithm;
+
+public class BinSearch {
+	
+	public static int binsearch(int []nums) {
+		if() {
+			
+		}
+		
+		return -1;
+	}
+	
+	public static void main(String []args) {
+		int []nums= {0,1,4,8,14,19};
+	}
+
+}

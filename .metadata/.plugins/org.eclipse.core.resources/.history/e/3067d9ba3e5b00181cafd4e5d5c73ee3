@@ -1,0 +1,17 @@
+package com.util;
+
+import java.net.URLConnection;
+
+public class Connect {
+	
+	private URLConnection urlconn;
+	
+	public void connect() {
+		urlconn.getURL();
+	}
+	
+	public static void main(String []args) {
+		Connect conn=new Connect();
+		conn.connect();
+	}
+}

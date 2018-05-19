@@ -1,0 +1,100 @@
+package com.xjtu.algorithm;
+
+import java.util.LinkedList;
+
+/**
+ * 使用两个栈模拟队列
+ * @author Administrator
+ *
+ */
+public class StackSimulateQueue {
+
+	//队列1用来入队，队列2用来出队
+	public static LinkedList<Integer> stack1=new LinkedList<Integer>();
+	public static LinkedList<Integer> stack2=new LinkedList<Integer>();
+	
+	/**
+	 * 入队，这里维护s1为入队的栈，s2为出队的栈
+	 * @param data
+	 */
+	public static void append(int data) {
+		stack1.push(data);
+	}
+	
+	public static void append_1(int data) {
+		if() {
+			
+		}
+	}
+	
+	/**
+	 * 出队，首先将s1中元素出栈， 并按照出栈顺序压入到s2中去，但是s2栈顶元素出栈完毕之后再将数据
+	 * 按照出战的顺序压入到s1中去，
+	 * 方案二：将数据出栈之后先不往回倒，继续保留，如果下个操作是入队的时候再将元素回填到s1中去
+	 * @return
+	 */
+	public static int poll() {
+		if(stack1.isEmpty()) {
+			System.out.println("队列已空！");
+			return -1;
+		}		
+		//将栈1的数据放在栈2中，并退栈
+		while(!stack1.isEmpty()) {
+			int temp=stack1.pop();
+			stack2.push(temp);
+		}
+		//退栈结束后，将栈2的数据回填到栈1中去
+		int res=stack2.pop();
+		while(!stack2.isEmpty()) {
+			int temp=stack2.pop();
+			stack1.push(temp);
+		}
+		//输出出队的元素
+		return res;
+	}
+	
+	/**
+	 * 判读队列是否为空
+	 * @return
+	 */
+	public static boolean isEmpty() {
+		if(stack1.isEmpty()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public static void show() {
+		while(!stack1.isEmpty()) {
+			int temp=stack1.pop();
+			stack2.push(temp);
+		}
+		while(!stack2.isEmpty()) {
+			int temp=stack2.pop();
+			System.out.print(temp+"\t");
+			stack1.push(temp);
+		}
+		System.out.println();
+	}
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		StackSimulateQueue queue=new StackSimulateQueue();
+		queue.append(1);
+		queue.append(2);
+		queue.append(3);
+		queue.append(4);
+		queue.append(5);
+		
+		queue.show();
+		queue.poll();
+		queue.poll();
+		queue.poll();
+		queue.show();
+//		queue.append(1);
+		queue.show();
+	}
+
+}

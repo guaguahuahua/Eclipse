@@ -1,0 +1,16 @@
+package com.xjtu.algorithm;
+
+import java.util.List;
+
+public class OnesInBinNum {
+
+	public static int onesInBinNum(List<Integer> list) {
+		return 0;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
