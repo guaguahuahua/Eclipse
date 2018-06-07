@@ -28,8 +28,9 @@
   
 	    <dependency>
 	        <groupId>org.springframework</groupId>
-	        <artifactId> spring-context</artifactId>
-	        <version>5.1.0.BUILD-SNAPSHOT</version>
+	        <artifactId>spring-context</artifactId>
+	        <version>4.3.17.RELEASE</version>
+	        <scope>runtime</scope>
 	    </dependency>
 	    
 	    <dependency>
@@ -41,18 +42,15 @@
 		<dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-webmvc</artifactId>
-	        <version>4.1.6.RELEASE</version>
+	        <version>4.3.17.RELEASE</version>
    		</dependency>
 	</dependencies>
 	
 	<repositories>
 	    <repository>
-	        <id>spring-snapshots</id>
-	        <name>Spring Snapshots</name>
-	        <url>https://repo.spring.io/libs-snapshot</url>
-	        <snapshots>
-	            <enabled>true</enabled>
-	        </snapshots>
+	        <id>io.spring.repo.maven.release</id>
+	        <url>http://repo.spring.io/release/</url>
+	        <snapshots><enabled>false</enabled></snapshots>
 	    </repository>
 	</repositories>
   	

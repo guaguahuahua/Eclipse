@@ -1,17 +1,10 @@
 package controller;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import entity.Person;
-import service.PersonService;
 
 @Controller
-//@RequestMapping("/hello")
+@RequestMapping("/hello")
 public class PersonController {
 
 //	@Autowired private PersonService personService;

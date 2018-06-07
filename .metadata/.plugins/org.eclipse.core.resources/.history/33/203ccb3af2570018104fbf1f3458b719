@@ -1,6 +1,0 @@
-package com.po;
-
-public class Maintainer {
-	private String mName;
-	private String password;
-}

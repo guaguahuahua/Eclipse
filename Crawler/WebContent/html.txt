@@ -1,0 +1,167 @@
+<html>
+ <head> 
+  <title>教师课表</title> 
+  <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1"> 
+  <meta name="CODE_LANGUAGE" Content="C#"> 
+  <meta name="vs_defaultClientScript" content="JavaScript"> 
+  <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5"> 
+  <link rel="stylesheet" href="../_style/styles_Qry.css" type="text/css"> 
+  <script language="JavaScript" src="../include/scr/ind_HTML_hr.js"></script> 
+  <script language="javascript">
+			function ChkValue()
+			{
+				var vJS;
+				var d='';
+				try{
+					vJS=document.all.Sel_JS.value;
+					if((vJS=="")||(vJS=="Nothing")){
+						alert('需选定教师！');
+						document.all.Sel_JS.focus();
+						return false;
+					}else if(document.all.txt_yzm.value=="" && d=="")
+					{
+					    alert("须录入验证码！");
+					    document.all.txt_yzm.focus();
+					    return false;
+					}else{
+						form.method='post';
+						form.action='TeacherKBFB_rpt.aspx';
+						form.target='frmRpt';
+						form.submit();
+						return true;
+					}
+				}catch(e){}
+			}
+			
+			function ShowListValue(theID,vP)
+			{
+				var vXNXQ,theURL;
+				try{
+					vXNXQ=document.all.Sel_XNXQ.value;					
+					
+					if(vXNXQ!="")
+					{
+						theURL="./Private/List_"+vP+".aspx?xnxq="+vXNXQ+"&js="+theID.value;
+						window.vfrmRpt.location.href=theURL;
+					}
+				}
+				catch(e){}
+			}
+			function ShowListValue2(theID,vP)
+			{
+				var vXNXQ,vW = "", theURL = "";
+				try{
+					
+					vXNXQ=document.all.Sel_XNXQ.value;
+					vW = theID.value;
+					
+					if(vW.length != 2)
+					{
+						vW = "";
+					}
+					
+					if(vXNXQ!="")
+					{
+						theURL="./Private/List_"+vP+".aspx?xnxq=&w="+vW;
+						window.vfrmRpt2.location.href=theURL;
+					}
+				}
+				catch(e){}
+			}
+			function ShowListValue3()
+			{
+				var vXNXQ,theURL;
+				var dt = new Date();
+				try{
+					vXNXQ=document.all.Sel_XNXQ.value;
+					if(vXNXQ!="")
+					{
+						theURL="./Private/List_JS.aspx?xnxq="+vXNXQ+"&t="+dt.getMilliseconds();
+						window.vfrmRpt.location.href=theURL;
+					}
+				}
+				catch(e){}
+			}
+			function doPrint(){
+				//frmRpt.document.execCommand("Print",true);
+				frmRpt._print_ = window.print;
+				if(navigator.userAgent.indexOf('MSIE') != -1 || (/rv:11.0/g.test(navigator.userAgent)))
+					frmRpt.document.execCommand("Print", true);
+				else
+					frmRpt._print_();
+			}
+			function changeValidateCode(){document.getElementById("imgCode").src="../sys/ValidateCode.aspx?t="+new Date().getMilliseconds();}
+		</script> 
+ </head> 
+ <body oncontextmenu="window.event.returnValue=false" ondragstart="window.event.returnValue=false" onsource="window.event.returnValue=false" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"> 
+  <form name="form" method="post" action="TeacherKBFB_rpt.aspx"> 
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%" align="center"> 
+    <tbody>
+     <tr> 
+      <td valign="top" align="center"> 
+       <table width="660" border="0" cellspacing="0" cellpadding="0" align="center" height="26"> 
+        <tbody>
+         <tr> 
+          <td valign="bottom" align="center"><b>教师课表</b></td> 
+         </tr> 
+         <tr> 
+          <td valign="bottom" align="center"><script language="JavaScript">Draw_HR('99.5%')</script> </td> 
+         </tr> 
+        </tbody>
+       </table> </td> 
+     </tr> 
+     <tr> 
+      <td height="52px"> 
+       <table width="660" border="0" align="center" cellpadding="0" cellspacing="0"> 
+        <tbody>
+         <tr> 
+          <td width="34%">学年学期&#x2002;<select name="Sel_XNXQ" style="WIDTH:165px"><option value="20171">2017-2018学年第二学期</option><option value="20140">2014-2015学年第一学期</option></select></td> 
+          <td width="66%">
+           <table align="left" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+             <tr>
+              <td width="40" align="center" valign="bottom">教师</td>
+              <td width="80" align="left"><input type="text" onchange="ShowListValue(this,'JS')" style="width:80"></td>
+              <td valign="middle" width="220" align="left" id="theJS"><select name="Sel_JS" style="height:20px;width:220"></select></td>
+             </tr>
+            </tbody>
+           </table> <input type="checkbox" name="chk_bhhj" id="chk_bhhj" value="1"><label for="chk_bhhj">不含环节安排</label></td> 
+         </tr> 
+         <tr>
+          <td align="left" colspan="2"> 
+           <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"> 
+            <tbody>
+             <tr> 
+              <td height="26px" align="left" id="sel_area1" width="86%"> <label><input type="radio" checked name="type" value="1" id="gs1">&nbsp;<label for="gs1">格式一</label> <input type="radio" name="type" value="2" id="gs2">&#x2002;<label for="gs2">格式二</label> </label> <label>验证码&#x2002;<input type="text" name="txt_yzm" id="txt_yzm" maxlength="4" style="width:40px"> <img id="imgCode" src="../sys/ValidateCode.aspx" onclick="changeValidateCode(this)" alt="单击可更换图片！" style="CURSOR: pointer;width:70px;height:24px"></label> </td> 
+              <td width="14%" align="right"> <input name="Submit01" type="button" value="检索" class="button" onclick="ChkValue()"> <input type="button" name="button" id="print" value="打印" class="but20" onclick="doPrint()"> </td> 
+             </tr> 
+            </tbody>
+           </table> </td>
+         </tr> 
+        </tbody>
+       </table> </td> 
+     </tr> 
+     <tr> 
+      <td valign="top" align="center" height="100%"> <iframe name="vfrmRpt" src="" style="DISPLAY:none" width="0" height="0" frameborder="0"></iframe> <iframe name="vfrmRpt2" src="" style="DISPLAY:none" width="0" height="0" frameborder="0"></iframe> <iframe name="frmRpt" src="TeacherKBFB_rpt.aspx" width="100%" height="99%" frameborder="1"></iframe> </td> 
+     </tr> 
+    </tbody>
+   </table> 
+   <script language="javascript">
+		ShowListValue3();
+		ShowListValue2();
+		if("11068"=="10050")
+		{
+			document.all.sel_area1.style.display='none';
+		}
+		if("11068"=="11342"){
+		var gs1 = document.getElementById('gs1');
+		var gs2 = document.getElementById('gs2');
+		var lbl = document.getElementById('lbl_jxrw');
+		gs1.onclick = function(){lbl.style.display = 'inline';};
+		gs2.onclick = function(){lbl.style.display = 'none';};
+	}
+	
+		</script> 
+  </form>   
+ </body>
+</html>

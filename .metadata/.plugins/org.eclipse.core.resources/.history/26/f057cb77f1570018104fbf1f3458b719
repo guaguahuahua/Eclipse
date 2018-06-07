@@ -1,8 +1,0 @@
-package com.action;
-
-public class ClientAction {
-
-	public String loginAction() {
-		
-	}
-}

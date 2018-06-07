@@ -1,5 +1,4 @@
 #Tomcat publish data
-#Sat May 19 14:33:54 CST 2018
-org.eclipse.jst.jee.server\:/binary\:E\:\\Eclipse\\SSH\\WebContent\\WEB-INF\\lib\\SpringMvcTest.jar=C\:\\apache-tomcat-8.0.47\\wtpwebapps\\SSH\\WEB-INF\\lib\\SpringMvcTest.jar
-org.eclipse.jst.jee.server\:SSH=C\:\\apache-tomcat-8.0.47\\wtpwebapps\\SSH
-org.eclipse.jst.jee.server\:/binary\:D\:\\mavenRepository\\org\\springframework\\spring-web\\4.1.6.RELEASE\\spring-web-4.1.6.RELEASE.jar=C\:\\apache-tomcat-8.0.47\\wtpwebapps\\SSH\\WEB-INF\\lib\\spring-web-4.1.6.RELEASE.jar
+#Wed May 30 20:07:43 CST 2018
+org.eclipse.jst.jee.server\:/binary\:D\:\\mavenRepository\\org\\springframework\\spring-web\\4.3.17.RELEASE\\spring-web-4.3.17.RELEASE.jar=C\:\\apache-tomcat-8.0.47\\wtpwebapps\\Springmvc\\WEB-INF\\lib\\spring-web-4.3.17.RELEASE.jar
+org.eclipse.jst.jee.server\:Springmvc=C\:\\apache-tomcat-8.0.47\\wtpwebapps\\Springmvc

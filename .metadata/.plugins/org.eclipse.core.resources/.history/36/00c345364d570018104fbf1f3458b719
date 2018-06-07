@@ -1,7 +1,0 @@
-package com.dao;
-
-import java.util.List;
-
-public interface RepairDao {
-	public boolean submit(String sql, List<Object>params);
-}

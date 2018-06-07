@@ -1,5 +1,0 @@
-package com.dao;
-
-public interface RepairDao {
-	public boolean submit(String sql, List<>);
-}
